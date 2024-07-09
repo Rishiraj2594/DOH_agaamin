@@ -8,8 +8,8 @@ const app = express();
 app.use(express.static('public'));
 
 const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/doh.hnslogin.world/privkey.pem'),
-  cert: fs.readFileSync('/etc/letsencrypt/live/doh.hnslogin.world/fullchain.pem')
+  key: fs.readFileSync('key.pem'),
+  cert: fs.readFileSync('csr.pem')
 };
 
 https.createServer(options, app).listen(443, '0.0.0.0',() => {
