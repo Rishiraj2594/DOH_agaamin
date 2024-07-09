@@ -8,7 +8,7 @@ const app = express();
 app.use(express.static('public'));
 
 const options = {
-  key: fs.readFileSync('/etc/letsencrypt/live/doh.hnslogin.world/private.pem'),
+  key: fs.readFileSync('/etc/letsencrypt/live/doh.hnslogin.world/privkey.pem'),
   cert: fs.readFileSync('/etc/letsencrypt/live/doh.hnslogin.world/fullchain.pem')
 };
 
