@@ -27,5 +27,4 @@ app.post('/dns-query', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(DoH server is running at http://localhost:${port});
 });
